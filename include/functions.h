@@ -1,22 +1,31 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-
 #include "files.h"
+
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <signal.h>
+#include <sys/wait.h>
 
-#define NUM_30s 100000000
+#define MAX_TEMP 15000000000
 
 
-
-int putOnQueue(Process **processes, int n_processes);
+int putOnQueue(Process **processes, int n_processes, Process **processesReady);
 
 void runProcess();
 
+void LotteryScheduling();
 
+int createProcess();
 
+void processoContador(int n);
 
-
+void ProcessManager();
 
 #endif
+
+
