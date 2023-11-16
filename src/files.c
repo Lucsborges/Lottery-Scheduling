@@ -38,6 +38,7 @@ int readFile(Process **processes){
     // Store each process
     for(int i = 0; i < line_count; i++){
         fscanf(file, "%s %d", (*processes)[i].name, &(*processes)[i].priority);
+        (*processes)[i].ready = false;
     }
 
     fclose(file);

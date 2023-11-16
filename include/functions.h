@@ -11,8 +11,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-#define MAX_TEMP 15000000000
-
+#define MAX_TEMP 3000000000    
+//7000000000 
 
 int putOnQueue(Process **processes, int n_processes, Process **processesReady);
 
@@ -25,6 +25,12 @@ int createProcess();
 void processoContador(int n);
 
 void ProcessManager();
+
+void ZombieKiller(int sig);
+
+void processReadyFalse(pid_t pid);
+
+int countReady();
 
 #endif
 
