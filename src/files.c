@@ -20,7 +20,7 @@ int readFile(Process **processes){
     }
 
     // Count the number of lines in the file
-    int line_count = 0;
+    int line_count = 1;
     char ch;
     while(!feof(file)){
         ch = fgetc(file);

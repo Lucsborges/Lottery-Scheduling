@@ -11,10 +11,13 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-#define MAX_TEMP 3000000000    
+ 
+#define PROCESS_PATH "./processo"
+#define PROCESS_NAME "processo"
+
+
 //7000000000 
 
-int putOnQueue(Process **processes, int n_processes, Process **processesReady);
 
 void runProcess();
 
@@ -22,15 +25,13 @@ void LotteryScheduling();
 
 int createProcess();
 
-void processoContador(int n);
-
 void ProcessManager();
 
-void ZombieKiller(int sig);
-
-void processReadyFalse(pid_t pid);
+void processReadyFalse(pid_t deadpid);
 
 int countReady();
+
+int preencheEndTA(int pid);
 
 #endif
 
